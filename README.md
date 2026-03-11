@@ -1,4 +1,4 @@
-# Pranav Patil - Portfolio Website
+# Atharv Joshi - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
