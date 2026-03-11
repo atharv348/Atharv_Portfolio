@@ -28,8 +28,8 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/pranav-portfolio.git
-cd pranav-portfolio
+git clone https://github.com/atharv348/Atharv_Portfolio.git
+cd Atharv_Portfolio
 ```
 
 2. Install dependencies:
@@ -69,7 +69,7 @@ The easiest way to deploy this Next.js app is to use the [Vercel Platform](https
 ## 📝 Customization
 
 - **Personal Info:** Update the content in `app/page.tsx`
-- **Resume:** Replace `public/Pranav-Patil-Resume.pdf` with your actual resume
+- **Resume:** Replace `public/Atharv-Joshi-Resume.pdf` with your actual resume
 - **Metadata:** Update SEO information in `app/layout.tsx`
 - **Styling:** Modify Tailwind classes or update `app/globals.css`
 

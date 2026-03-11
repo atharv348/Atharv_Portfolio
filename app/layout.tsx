@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pranav Patil - Full-Stack Developer & AI Enthusiast",
-  description: "Portfolio of Pranav Patil, a third-year Computer Science student specializing in full-stack web development, cloud deployment, and AI/ML applications.",
+  title: "Atharv Joshi - Full-Stack Developer & AI Enthusiast",
+  description: "Portfolio of Atharv Joshi, a third-year Computer Science student specializing in full-stack web development, cloud deployment, and AI/ML applications.",
 };
 
 export default function RootLayout({

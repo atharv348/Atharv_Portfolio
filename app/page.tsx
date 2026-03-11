@@ -15,7 +15,7 @@ export default function Home() {
               Portfolio
             </p>
             <h1 className="text-3xl font-semibold sm:text-4xl lg:text-5xl">
-              Pranav <span className="text-sky-400">Patil</span>
+              Atharv <span className="text-sky-400">Joshi</span>
             </h1>
             <p className="text-lg font-medium text-slate-200">
               Aspiring Full-Stack Developer &amp; AI Enthusiast
@@ -40,7 +40,7 @@ export default function Home() {
                 Contact Me
               </a>
               <a
-                href="/Pranav-Patil-Resume.pdf"
+                href="/Atharv-Joshi-Resume.pdf"
                 className="rounded-full border border-slate-600 px-5 py-2 text-sm font-medium text-slate-100 transition hover:border-emerald-400 hover:text-emerald-300"
               >
                 Download Resume
