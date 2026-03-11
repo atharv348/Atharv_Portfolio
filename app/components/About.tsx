@@ -185,7 +185,7 @@ export default function About() {
               </div>
               <div className="p-5 space-y-2" style={{ fontFamily: "var(--font-mono)", fontSize: "0.8rem" }}>
                 <TerminalLine delay={0} visible={visible} prefix="$" color="var(--cyan)">
-                  whoami
+                  who am i
                 </TerminalLine>
                 <TerminalLine delay={300} visible={visible} prefix=">" color="var(--text-secondary)">
                   Atharv C. Joshi — AI/ML + Robotics Engineer
