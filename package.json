@@ -14,7 +14,7 @@
     "framer-motion": "^11.15.0",
     "gsap": "^3.12.5",
     "lenis": "^1.1.14",
-    "next": "15.1.6",
+    "next": "15.2.3",
     "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
@@ -30,19 +30,9 @@
     "@types/react-dom": "^19",
     "autoprefixer": "^10.0.1",
     "eslint": "^9",
-    "eslint-config-next": "15.1.6",
+    "eslint-config-next": "15.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  },
-  "description": "Portfolio of Atharv Joshi — AI/ML student specializing in robotics, autonomous systems, computer vision, and intelligent backend development.",
-  "keywords": [
-    "portfolio",
-    "nextjs",
-    "atharv-joshi",
-    "ai",
-    "robotics"
-  ],
-  "author": "Atharv Joshi",
-  "license": "MIT"
+  }
 }
