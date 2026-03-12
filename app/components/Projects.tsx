@@ -213,7 +213,7 @@ function ProjectCard({
                 <div
                   key={idx}
                   className="relative aspect-video rounded overflow-hidden cursor-pointer transition-transform hover:scale-105"
-            v>
+                      >
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 pt-5 border-t border-[var(--border)]">
