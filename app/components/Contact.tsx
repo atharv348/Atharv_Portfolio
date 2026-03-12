@@ -45,6 +45,13 @@ const contactLinks = [
     icon: "☏",
     color: "var(--orange)",
   },
+  {
+    label: "WhatsApp",
+    value: "+91 93025 73730",
+    href: "https://wa.me/919302573730",
+    icon: "💬",
+    color: "var(--green)",
+  },
 ];
 
 export default function Contact() {
