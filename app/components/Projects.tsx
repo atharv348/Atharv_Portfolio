@@ -205,16 +205,6 @@ function ProjectCard({
           {project.description}
         </p>
 
-        {/* Image Gallery */}
-        {project.images && project.images.length > 0 && (
-          <div className="mb-6 rounded-lg overflow-hidden border border-[var(--border)]">
-            <div className="grid grid-cols-3 gap-2 p-2" style={{ background: "rgba(0,0,0,0.3)" }}>
-              {project.images.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="relative aspect-video rounded overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                      >
-
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 pt-5 border-t border-[var(--border)]">
           {project.tech.map((t) => (
