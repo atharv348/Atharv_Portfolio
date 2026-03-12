@@ -54,6 +54,14 @@ const projects = [
     ],
     icon: "🤖",
     size: "large",
+    images: [
+      "/rover/rover-1.jpeg",
+      "/rover/rover-2.jpeg",
+      "/rover/rover-3.jpeg",
+      "/rover/rover-4.jpeg",
+      "/rover/rover-5.jpeg",
+      "/rover/rover-6.jpeg",
+    ],
   },
   {
     id: "03",
@@ -204,6 +212,28 @@ function ProjectCard({
         <p className="text-[var(--text-secondary)] text-sm leading-relaxed mb-5">
           {project.description}
         </p>
+
+        {/* Image Gallery */}
+        {project.images && project.images.length > 0 && (
+          <div className="mb-6 rounded-lg overflow-hidden border border-[var(--border)]">
+            <div className="grid grid-cols-3 gap-2 p-2" style={{ background: "rgba(0,0,0,0.3)" }}>
+              {project.images.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="relative aspect-video rounded overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                  data-cursor="hover"
+                  style={{ background: "rgba(255,255,255,0.05)" }}
+                >
+                  <img
+                    src={img}
+                    alt={`${project.title} - Image ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Features */}
         <div className="space-y-2 mb-6">
