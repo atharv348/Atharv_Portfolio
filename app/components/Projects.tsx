@@ -54,14 +54,6 @@ const projects = [
     ],
     icon: "🤖",
     size: "large",
-    images: [
-      "/rover/rover-1.jpeg",
-      "/rover/rover-2.jpeg",
-      "/rover/rover-3.jpeg",
-      "/rover/rover-4.jpeg",
-      "/rover/rover-5.jpeg",
-      "/rover/rover-6.jpeg",
-    ],
   },
   {
     id: "03",
@@ -221,29 +213,7 @@ function ProjectCard({
                 <div
                   key={idx}
                   className="relative aspect-video rounded overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                  data-cursor="hover"
-                  style={{ background: "rgba(255,255,255,0.05)" }}
-                >
-                  <img
-                    src={img}
-                    alt={`${project.title} - Image ${idx + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Features */}
-        <div className="space-y-2 mb-6">
-          {project.features.map((f) => (
-            <div key={f} className="flex items-center gap-2 text-sm">
-              <span style={{ color: project.color }}>▸</span>
-              <span className="text-[var(--text-secondary)]">{f}</span>
-            </div>
-          ))}
-        </div>
+            v>
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 pt-5 border-t border-[var(--border)]">
