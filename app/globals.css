@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'DM Sans', sans-serif;
+  --void: #030308;
+  --ink: #0a0a18;
+  --surface: #0f0f1e;
+  --panel: #141428;
+  --border: #1e1e3a;
+  --cyan: #00f5ff;
+  --purple: #8b5cf6;
+  --green: #00ff88;
+  --orange: #ff6b35;
+  --text-primary: #e8e8f0;
+  --text-secondary: #9090b0;
+  --text-muted: #505070;
+}
+
+* { box-sizing: border-box; padding: 0; margin: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 2px; opacity: 0.5; }
+::selection { background: rgba(0,245,255,0.2); color: var(--cyan); }
+
+/* Custom cursor */
+.cursor-dot {
+  width: 8px; height: 8px;
+  background: var(--cyan); border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  mix-blend-mode: difference;
+}
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(0,245,255,0.5); border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9998;
+  transition: width 0.2s, height 0.2s, border-color 0.2s, background 0.2s;
+}
+.cursor-ring.hovered {
+  width: 56px; height: 56px;
+  border-color: var(--cyan);
+  background: rgba(0,245,255,0.05);
+}
+
+/* Noise */
+.noise::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 1000; opacity: 0.35;
+}
+
+/* Grid bg */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,245,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,245,255,0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Glass */
+.glass {
+  background: rgba(10,10,24,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Gradient border card */
+.g-card {
+  background: var(--panel);
+  border-radius: 12px;
+  position: relative;
+}
+.g-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0,245,255,0.25), rgba(139,92,246,0.1), rgba(0,245,255,0.04));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(0,245,255,0.12), rgba(139,92,246,0.12));
+  border: 1px solid rgba(0,245,255,0.3);
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: none;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  border-color: rgba(0,245,255,0.7);
+  box-shadow: 0 0 28px rgba(0,245,255,0.18);
+  color: #fff;
+}
+.btn-ghost {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: none;
+  text-decoration: none;
+}
+.btn-ghost:hover { border-color: var(--text-secondary); color: var(--text-primary); }
+
+/* Tech pill */
+.pill {
+  background: rgba(0,245,255,0.05);
+  border: 1px solid rgba(0,245,255,0.12);
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+.pill:hover {
+  background: rgba(0,245,255,0.1);
+  border-color: rgba(0,245,255,0.35);
+}
+
+/* Scan line */
+.scan-line {
+  position: fixed; width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,245,255,0.08), transparent);
+  pointer-events: none; z-index: 500;
+  animation: scanAnim 10s linear infinite;
+}
+
+/* Terminal cursor */
+.tcursor::after {
+  content: '|';
+  color: var(--cyan);
+  animation: blink 1s step-end infinite;
+}
+
+/* Animations */
+@keyframes scanAnim { 0% { top: -2px; } 100% { top: 100vh; } }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+@keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-16px)} }
+
+.fade-up { animation: fadeUp 0.75s ease forwards; }
+.op-0 { opacity: 0; }
+
+/* Section fade */
+.sec-fade {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.sec-fade.visible { opacity: 1; transform: translateY(0); }
+
+/* Skill bar */
+.skill-bar-track {
+  height: 3px; width: 100%;
+  background: rgba(255,255,255,0.04);
+  border-radius: 999px; overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%; border-radius: 999px;
+  transition: width 1.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Project card hover */
+.proj-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.proj-card:hover { transform: translateY(-6px); }
+
+/* Stat number */
+.stat-num {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+}
+
+/* Molecules background */
+.molecules-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure all sections are above molecules */
+main, nav, footer {
+  position: relative;
+  z-index: 1;
+}
+
