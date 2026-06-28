@@ -37,7 +37,7 @@ export default function Hero() {
     const pts = Array.from({ length: 70 }, () => ({
       x: Math.random() * W, y: Math.random() * H,
       vx: (Math.random() - 0.5) * 0.28, vy: (Math.random() - 0.5) * 0.28,
-      r: Math.random() * 1.4 + 0.4, a: Math.random() * 0.45 + 0.08, p: Math.random() * Math.PI * 2,
+      r: Math.random() * 1.4 + 0.4, a: Math.random() * 0.45 + 0.08, pulse: Math.random() * Math.PI * 2,
     }));
 
     let mx = -999, my = -999;
