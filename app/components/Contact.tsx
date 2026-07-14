@@ -13,7 +13,7 @@ function useInView(threshold = 0.1) {
 }
 
 const links = [
-  { label: "Email", value: "joshiatharv348@gmail.com", href: "mailto:joshiatharv348@gmail.com", icon: "✉", color: "var(--cyan)" },
+  { label: "Email", value: "atharv.c.joshi@gmail.com", href: "mailto:atharv.c.joshi@gmail.com", icon: "✉", color: "var(--cyan)" },
   { label: "GitHub", value: "github.com/atharv348", href: "https://github.com/atharv348", icon: "⌥", color: "var(--purple)" },
   { label: "LinkedIn", value: "linkedin.com/in/atharv-joshi-ai", href: "https://linkedin.com/in/atharv-joshi-ai", icon: "◈", color: "var(--green)" },
   { label: "Portfolio", value: "atharv-portfolio-lime.vercel.app", href: "https://atharv-portfolio-lime.vercel.app", icon: "◎", color: "var(--orange)" },
@@ -25,7 +25,7 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("joshiatharv348@gmail.com");
+    navigator.clipboard.writeText("atharv.c.joshi@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2200);
   };

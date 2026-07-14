@@ -1,5 +1,6 @@
 import CustomCursor from "./components/CustomCursor";
 import Molecules from "./components/Molecules";
+import VoiceAgent from "./components/VoiceAgent";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Molecules />
       <CustomCursor />
+      <VoiceAgent />
       <Navbar />
       <main>
         <Hero />

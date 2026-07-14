@@ -73,7 +73,7 @@ export default function About() {
               <p>
                 From <span style={{ color: "var(--cyan)" }}>SvasthaAI</span> — a full-stack health OS with RAG-powered medical analysis and multi-organ clinical inference, to{" "}
                 <span style={{ color: "var(--purple)" }}>ALIS</span> — an AI Legal Intelligence System with transformer-based NLP and OCR workflows, to an{" "}
-                <span style={{ color: "var(--green)" }}>autonomous surveillance rover</span> built on ROS2 that competed at IIT Madras and COEP Pune.
+                <span style={{ color: "var(--green)" }}>autonomous surveillance rover</span> built on ROS2.
               </p>
               <p>
                 I build with <span className="text-white font-medium">Python · PyTorch · ROS2 · FastAPI · LangChain · Docker · AWS</span> — and I care deeply about production-grade, deployable AI, not just research demos.
